@@ -86,3 +86,7 @@ production:
   database: ESpY_production
 #  username: ESpY
 #  password: <%= ENV['ESPY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
