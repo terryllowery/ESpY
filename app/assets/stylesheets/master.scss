@@ -1,3 +1,16 @@
+@import "bootstrap";
+body {
+  background: image_url('ravenna.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+  "Liberation Serif", Georgia, serif;
+}
+.navbar {
+  box-shadow: 0px 1px 3px #2a2a2a;
+  opacity: 1.0;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  background: image_url('ravenna.png');
+}
+
 .booyah-box {
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
