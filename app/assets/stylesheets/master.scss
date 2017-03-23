@@ -6,9 +6,14 @@ body {
 }
 .navbar {
   box-shadow: 0px 1px 3px #2a2a2a;
-  opacity: 1.0;
-  filter: alpha(opacity=30); /* For IE8 and earlier */
   background: image_url('ravenna.png');
+}
+.navbar-brand {
+  color: #FF002B !important;
+  font-weight: 600;
+  font-family: 'introheadr-base', sans-serif;
+  font-size: 28px;
+  letter-spacing: -0.3px;
 }
 
 .booyah-box {
