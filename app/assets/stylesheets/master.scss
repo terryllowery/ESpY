@@ -23,11 +23,38 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #e4e4e4;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 15px;
   padding: 20px;
 }
 h1 h2 h3 h4 h5 h6 {
   margin: 0;
   padding: 0;
+}
+.digg_pagination {
+  background: image_url('ravanna.png');
+  cursor: default;
+  height: 22px;
+  a span em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px ;
+    color: #FF002B !important;
+  }
+  .page_info {
+    a span em {
+      padding: 0.2em 0.5em;
+      display: block;
+      float: left;
+      margin-right: 1px ;
+      color: #FF002B !important;
+    }
+  }
+  .disabled {
+    display: none;
+  }
+  .active {
+
+  }
 }
