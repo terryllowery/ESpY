@@ -19,6 +19,11 @@ gem 'font-awesome-rails'
 # Authentication for users
 gem 'devise'
 
+# Geocoding gem for map features
+gem 'geocoder'
+
+# install figaro
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
