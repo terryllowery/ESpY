@@ -45,7 +45,7 @@
 <div class="clear col-6 offset-3">
 <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
   <%= f.input :message %>
-  <%= f.input :rating %>
+  <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
   <%= f.submit "Add a comment", class: "btn btn-primary float-right" %>
 <% end %>
   <% @place.comments.each do | c | %>
@@ -54,7 +54,9 @@
       <h1 class="clear col-6 offset-3">Comments:</h1>
       <div class="clear col-6 offset-3">
         <blockquote>
-          <b><%= c.rating %> Stars</b> -
+          <% if c.humanized_rating %>
+             <b><%= c.humanized_rating %></b> -
+          <% end %>
           <%= c.message %>
           <small>Left by: <%= c.user.email %></small>
         </blockquote>
