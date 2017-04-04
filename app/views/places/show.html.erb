@@ -43,9 +43,20 @@
   <br />
 </div>
 
-<h1 class="clear col-6 offset-3 center-text">Comments:</h1>
-<% @place.comments.each do | c | %>
-    <div class="clear col-6 offset-3 booyah-box">
+<div class="row">
+  <div class="col-12 col-sm-6"><h1 class="float-left">Comments:</h1>
+  <!-- Button trigger modal -->
+  </div>
+  <div class="col-12 col-sm-6">
+  <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
+    Add A Comment
+  </button>
+  </div>
+</div>
+<!-- Place comments section -->
+
+<div class="row clear"><% @place.comments.each do | c | %>
+    <div class="col-12 col-sm-6">
       <blockquote>
         <% if c.humanized_rating %>
             <b><%= c.humanized_rating %></b> -
@@ -55,12 +66,8 @@
       </blockquote>
     </div>
 <% end %>
-
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary col-2 offset-5" data-toggle="modal" data-target="#myModal">
-    Add A Comment
-  </button>
-
+</div>
+<div class="clear"></div>
 <!-- TODO Issues with modal header not centering-->
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
