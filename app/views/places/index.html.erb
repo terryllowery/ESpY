@@ -11,7 +11,12 @@
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p>
-
+        <% if place.photos.last.present? %>
+        <br/>
+        <h2><%= place.photos.last.caption %></h2>
+        <%= image_tag place.photos.last.picture, class: 'index-picture'%>
+        <br/>
+        <% end %>
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
