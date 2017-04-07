@@ -87,11 +87,15 @@
         <h3><%= p.caption %></h3>
         <br />
         <%=image_tag p.picture, class: 'place-picture'%>
+
+    <% if p.user_id %>
+        <hr />
+        <br />
+        Picture uploaded by: <%= User.find(p.user_id).email %>
+    <% end %>
   </div>
     <% end %>
-
   <% end %>
-
 </div>
 
 
